@@ -3,14 +3,14 @@
 ESTE script
 
 es un osciloscopio, 
-toma la posicion y, del mouse, 
-y lo grafica en el tiempo, 
-los datos de y, se guardan en una lista, 
-en forma FIFO, 
+toma la posicion coordenada 'Y' del mouse, 
+y lo grafica VS tiempo, 
+los datos se guardan en una lista, 
+se grafica en forma FIFO,  de derecha a izq.
 
 se pueden activar boton, para guardar los datos recibidos en un txt. 
 
-se puede modificar, para que la entrada sea un sensor, u otro dato para graficar vs tiempo. 
+el script se puede modificar, para que la entrada sea un sensor, u otro dato para graficar vs tiempo. 
 
 sebabucc24@gmail.com
 
