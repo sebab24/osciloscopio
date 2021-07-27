@@ -24,7 +24,7 @@ pygame.display.set_caption("SENSOR VS TIEMPO")
 #icon = pygame.image.load("osciloscopio.png")
 #pygame.display.set_icon(icon) 
  
-# Used to manage how fast the screen updates
+# 
 clock = pygame.time.Clock()
 
 
@@ -43,16 +43,11 @@ BLUE =  (0, 0, 255)
 class PUNTO:
 	
 	def __init__(self, y):
-		
-		
+			
 		self.x = ancho/2
 		self.y = y
-
 		self.tamano = 10
-		
-		
 	
-
 
 
 def CARTEL(texto, posicion, tamano, color):
@@ -65,7 +60,7 @@ def CARTEL(texto, posicion, tamano, color):
 
 
 def PAUSA():
-	#print('PAUSADO')
+	
 	pygame.mixer.pause()
 	global TEXTOCARTEL
 	#TEXTOCARTEL='PAUSADO'
@@ -160,12 +155,6 @@ def GRABARCONDICION():
 
 def main():
 	
-	#META= [950, 200, 20, 100]
-
-	# fuente = pygame.font.Font(None, 50)
-	# fuente2 = pygame.font.Font(None, 80)
-	
-	
 	global Mx
 	global My
 	global Mpress
@@ -204,12 +193,9 @@ def main():
 	
 		
 		
-		
 	# --- Drawing
 		DIBUJOGRILLA()
-		
-		
-		#MOUSErojo= pygame.draw.circle(screen, RED, [Mx, My], 3, 0)
+				
 		
 	# ---- CARTELES 
 		CARTEL(TEXTOCARTEL, (850,50), 30, RED)
@@ -232,18 +218,7 @@ def main():
 		BOTONrecord=BOTON('RECORD', WHITE, (ancho*9/10,alto*3/10))
 		if BOTONrecord.estado():
 			GRABARCONDICION()
-			# time.sleep(0.2)
-			# if record ==True:
-				# time.sleep(0.2)
-				# f.close()
-				# TEXTOCARTEL=''
-				# record=False
-			# else:
-				# now = datetime.now()
-				# current_time = now.strftime('%H:%M:%S')
-				# f=open(f'RECORD-{current_time}.txt','a')
-				# record=True
-		
+					
 		
 		if record == True:
 			TEXTOCARTEL='GRABANDO'
@@ -283,26 +258,15 @@ def main():
 			pygame.draw.line(screen, WHITE, (ancho*8/10-i, H[num-1-i]), (ancho*8/10-i-1, H[num-1-i-1]), 1)
 			
 		
-		
-		#---TEXTOS.....
-		# CARTEL(texto, posicion, tamano, color)
-		#CARTEL(f'{Mx} - {My}', (10,10), 30, WHITE)
-		#CARTEL (str(len(H)), (10,30), 30, WHITE)
-		
-		
-					   
+						   
 		# --- EVENTOS 
-		
-					
-		
+				
 		if keys[pygame.K_UP]:pass
 		if keys[pygame.K_DOWN]:pass
 		if keys[pygame.K_LEFT]:pass
 		if keys[pygame.K_RIGHT]:pass
 			
-
 	
-		
 		
 		
 # _______________________________     
@@ -310,16 +274,14 @@ def main():
 		for event in pygame.event.get():
 			#print (event)
 			if event.type == pygame.QUIT:exit()
-				
-							
+									
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_p:
 					PAUSA()
 			
 				if event.key == pygame.K_q:exit()	
 		#if keys[pygame.K_q]:exit()         
-			
-		
+				
 		
 		clock.tick(tick)  
 		pygame.display.flip()      
