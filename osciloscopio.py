@@ -1,13 +1,3 @@
-"""
- Bounces a rectangle around the screen.
- 
- Sample Python/Pygame Programs
- Simpson College Computer Science
- http://programarcadegames.com/
- http://simpson.edu/computer-science/
- 
- Explanation video: http://youtu.be/-GmKoaX2iMs
-"""
 from random import randint
 
 import numpy as np 
@@ -49,24 +39,6 @@ BLUE =  (0, 0, 255)
 
 
 
-# SONIDOS
-
-# CHOQUEsonido = pygame.mixer.Sound('SONIDOS/CHOQUEsonido.ogg')
-# TRIUNFOsonido =  pygame.mixer.Sound('SONIDOS/TRIUNFO.ogg')
-# PUERTAsonido=pygame.mixer.Sound('SONIDOS/PUERTA.ogg')
-# BEEPMAL=pygame.mixer.Sound('SONIDOS/BEEPMAL.ogg')
-# METAsonido=pygame.mixer.Sound('SONIDOS/META.ogg')
-
-# MUSICAtecno= pygame.mixer.Sound('SONIDOS/MUSICATECNO.ogg')
-# MUSICAtecno.play(-1).set_volume(0.1)
-
-
-#imagenfondo = pygame.image.load('FONDO.jpg')
-# CONEJO = pygame.transform.scale(CONEJO, (100,100))
-
-
-	
-
 
 class PUNTO:
 	
@@ -80,10 +52,6 @@ class PUNTO:
 		
 		
 	
-		
-
-
-
 
 
 
@@ -139,10 +107,6 @@ def DIBUJOGRILLA():
 		pygame.draw.line(screen, GRAY, (0, alto/10*i),(ancho*8/10, alto/10*i), 1)
 		if ancho/10*i<ancho*8/10:
 			pygame.draw.line(screen, GRAY, (ancho/10*i, 0),(ancho/10*i, alto), 1)
-
-
-
-
 
 
 
@@ -318,9 +282,6 @@ def main():
 		for i in range(num):
 			pygame.draw.line(screen, WHITE, (ancho*8/10-i, H[num-1-i]), (ancho*8/10-i-1, H[num-1-i-1]), 1)
 			
-			
-		
-		
 		
 		
 		#---TEXTOS.....
@@ -330,12 +291,8 @@ def main():
 		
 		
 					   
-		# --- Event Processing
+		# --- EVENTOS 
 		
-		
-
-			
-				
 					
 		
 		if keys[pygame.K_UP]:pass
@@ -343,19 +300,8 @@ def main():
 		if keys[pygame.K_LEFT]:pass
 		if keys[pygame.K_RIGHT]:pass
 			
-			
-				
-		
-		
-		
-		
-			
-		#Draw the rectangle
-		
-		
+
 	
-		
-		
 		
 		
 		
@@ -387,60 +333,3 @@ if __name__ == '__main__':
     main()
 
 
-
-'''
-
-# BLIT -------	
-	
-	
-
-	# CONEJO_y= 500+20*np.sin(CONEJO_x/15)
-	# CONEJO_pos=[CONEJO_x,CONEJO_y]
-	# if P=='casa2':
-		# if CONEJOvel_x>0:
-			# screen.blit(CONEJO,CONEJO_pos)
-		# else:
-			# screen.blit(LCONEJO,CONEJO_pos)
-#############	
-	
-	
-
-
-# -----CONEJO----------------__
-# CONEJO = pygame.image.load('IMAGENES/conejito.png')
-# CONEJO = pygame.transform.scale(CONEJO, (100,100))
-
-# LCONEJO= pygame.transform.flip(CONEJO, True, False)
-
-
-# #CONEJO :  Posicion  / Velocidad inicial
-# CONEJO_x=100.0
-# CONEJO_y=500.0
-
-# CONEJOvel_x=1
-# CONEJOvel_y=0
-
-
-
-# #PLANO base   (P=base)
-# P='base'
-
-
-
-# FONDO PRADERA
-imagenfondo_pos = [0, 0]
-
-imagenfondo = pygame.image.load('IMAGENES/PRADERA.png')
-imagenfondo = pygame.transform.scale(imagenfondo, size)
-#screen.blit(background_image, background_position)
-
-
-
-
-def FONDO(archivoimagen):
-	global imagenfondo
-	imagenfondo = pygame.image.load(archivoimagen)
-	imagenfondo = pygame.transform.scale(imagenfondo, size)
-	screen.blit(imagenfondo, imagenfondo_pos)
-
-'''  
